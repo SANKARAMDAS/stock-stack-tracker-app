@@ -1,6 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+This is a Stock market-related app called "Stock Stack"
 ## Getting Started
+
+Technology used:
+- Next.js
+- Tailwind CSS
+- Vercel
+- Shadcn
+- MongoDB
+- Typescript
+- BetterAuth
+- Inngest
+- Code Rabbit
 
 First, run the development server:
 
