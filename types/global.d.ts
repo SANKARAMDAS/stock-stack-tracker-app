@@ -206,6 +206,12 @@ declare global {
         related?: string;
     };
 
+    type UserForNewsEmail = {
+        id: string;
+        email: string;
+        name: string;
+    };
+
     type Alert = {
         id: string;
         symbol: string;
@@ -425,6 +431,12 @@ declare global {
         image?: string;
         category?: string;
         related?: string;
+    };
+
+    type UserForNewsEmail = {
+        id: string;
+        email: string;
+        name: string;
     };
 
     type Alert = {
