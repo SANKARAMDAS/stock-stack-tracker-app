@@ -5,7 +5,7 @@ import Link from "next/dist/client/link";
 import {usePathname} from "next/dist/client/components/navigation";
 import SearchCommand from "@/components/SearchCommand";
 
-const NavItems = () => {
+const NavItems = ({initialStocks}: {initialStocks: StockWithWatchlistStatus[]}) => {
     const pathname = usePathname();
 
     const isActive = (path: string) => {
@@ -20,9 +20,9 @@ const NavItems = () => {
                 if(href === '/search') return (
                     <li key="search-trigger">
                         <SearchCommand
-                            // renderAs="text"
-                            // label="Search"
-                            // initialStocks={initialStocks}
+                            renderAs="text"
+                            label="Search"
+                            initialStocks={initialStocks}
                         />
                     </li>
                 )
