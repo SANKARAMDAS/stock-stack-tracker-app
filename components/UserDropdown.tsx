@@ -13,16 +13,18 @@ import {useRouter} from "next/navigation";
 import {Button} from "@/components/ui/button";
 import {LogOut} from "lucide-react";
 import NavItems from "@/components/NavItems";
-// import {signOut} from "@/lib/actions/auth.actions";
+import {signOut} from "@/lib/actions/auth.actions";
 
-const UserDropdown = () => {
+const UserDropdown = ({user}: {user?: User}) => {
     // ({ user, initialStocks }: {user: User, initialStocks: StockWithWatchlistStatus[]})
     const router = useRouter();
 
     const handleSignOut = async () => {
-        // await signOut();
+        await signOut();
         router.push("/sign-in");
     }
+
+    if (!user) return null;
 
     return (
         <DropdownMenu>
@@ -31,12 +33,12 @@ const UserDropdown = () => {
                     <Avatar className="h-8 w-8">
                         <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" />
                         <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
-                            {/*{user.name[0]}*/}
+                            {user.name[0]}
                         </AvatarFallback>
                     </Avatar>
                     <div className="hidden md:flex flex-col items-start">
                         <span className='text-base font-medium text-gray-400'>
-                            {/*{user.name}*/}
+                            {user.name}
                         </span>
                     </div>
                 </Button>
@@ -47,15 +49,15 @@ const UserDropdown = () => {
                         <Avatar className="h-10 w-10">
                             <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" />
                             <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
-                                {/*{user.name[0]}*/}
+                                {user.name[0]}
                             </AvatarFallback>
                         </Avatar>
                         <div className="flex flex-col">
                             <span className='text-base font-medium text-gray-400'>
-                                {/*{user.name}*/}
+                                {user.name}
                             </span>
                             <span className="text-sm text-gray-500">
-                                {/*{user.email}*/}
+                                {user.email}
                             </span>
                         </div>
                     </div>

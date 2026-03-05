@@ -3,8 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import NavItems from "@/components/NavItems";
 import UserDropdown from "@/components/UserDropdown";
+import {auth} from "@/lib/better-auth/auth";
+import {headers} from "next/headers";
 
-const Header = () => {
+const Header = async ({user}: {user: User}) => {
+
+
+    // const initialStocks = await searchStocks();
     return (
         <header className='sticky top-0 header'>
             <div className='container header-wrapper'>
@@ -16,7 +21,7 @@ const Header = () => {
                     <NavItems />
                 </nav>
                 {/*UserDropdown*/}
-                <UserDropdown user={undefined} initialStocks={[]} />
+                <UserDropdown user={user} />
             </div>
         </header>
     )
