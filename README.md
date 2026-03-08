@@ -112,5 +112,11 @@ To contribute or manage features, please follow this workflow:
     git merge feature/your-feature-name
     ```
 
+    <img width="768" height="315" alt="dashboard-preview" src="https://github.com/user-attachments/assets/10286ce4-80ed-4bf8-89c4-999f13b6b649" />
+
+    <img width="1440" height="1162" alt="dashboard" src="https://github.com/user-attachments/assets/fe91db14-b2a1-479c-95f8-99361ee2155d" />
+
+
+
 ---
 Built with ❤️ for the Stock Market Community.
